@@ -38,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -183,4 +176,36 @@ html {
 .hover-lift:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Improved animations for mobile */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-bounce,
+  .hover-lift {
+    animation: none;
+    transform: none;
+  }
+}
+
+/* Light theme specific styles */
+.light {
+  --tw-gradient-from: #dbeafe;
+  --tw-gradient-to: #fdf4ff;
+}
+
+/* Enhanced mobile navigation */
+@media (max-width: 1024px) {
+  nav .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
